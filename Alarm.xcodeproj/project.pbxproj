@@ -14,7 +14,7 @@
 		1A0FB7BF1CE19229006808D9 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0FB7BE1CE19229006808D9 /* DateHelper.swift */; };
 		CC5866811CF3A74F00677EB6 /* Alarm 3.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5866801CF3A74F00677EB6 /* Alarm 3.swift */; };
 		CC5866841CF3A98200677EB6 /* AlarmListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5866831CF3A98200677EB6 /* AlarmListTableViewController.swift */; };
-		CC5866861CF3A99300677EB6 /* SwtichTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5866851CF3A99300677EB6 /* SwtichTableViewCell.swift */; };
+		CC5866861CF3A99300677EB6 /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5866851CF3A99300677EB6 /* SwitchTableViewCell.swift */; };
 		CC5866881CF3A9D200677EB6 /* AlarmDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5866871CF3A9D200677EB6 /* AlarmDetailTableViewController.swift */; };
 		CC58668C1CF3B22F00677EB6 /* AlarmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC58668B1CF3B22F00677EB6 /* AlarmController.swift */; };
 /* End PBXBuildFile section */
@@ -29,7 +29,7 @@
 		1A0FB7BE1CE19229006808D9 /* DateHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		CC5866801CF3A74F00677EB6 /* Alarm 3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Alarm 3.swift"; path = "../../Desktop/Alarm 3.swift"; sourceTree = "<group>"; };
 		CC5866831CF3A98200677EB6 /* AlarmListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmListTableViewController.swift; sourceTree = "<group>"; };
-		CC5866851CF3A99300677EB6 /* SwtichTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwtichTableViewCell.swift; sourceTree = "<group>"; };
+		CC5866851CF3A99300677EB6 /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
 		CC5866871CF3A9D200677EB6 /* AlarmDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmDetailTableViewController.swift; sourceTree = "<group>"; };
 		CC58668B1CF3B22F00677EB6 /* AlarmController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,7 +80,7 @@
 			children = (
 				CC5866801CF3A74F00677EB6 /* Alarm 3.swift */,
 				1A0FB7BE1CE19229006808D9 /* DateHelper.swift */,
-				CC5866851CF3A99300677EB6 /* SwtichTableViewCell.swift */,
+				CC5866851CF3A99300677EB6 /* SwitchTableViewCell.swift */,
 				CC58668B1CF3B22F00677EB6 /* AlarmController.swift */,
 			);
 			name = MODEL;
@@ -175,7 +175,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC5866881CF3A9D200677EB6 /* AlarmDetailTableViewController.swift in Sources */,
-				CC5866861CF3A99300677EB6 /* SwtichTableViewCell.swift in Sources */,
+				CC5866861CF3A99300677EB6 /* SwitchTableViewCell.swift in Sources */,
 				1A0FB77F1CDD4F07006808D9 /* AppDelegate.swift in Sources */,
 				CC5866841CF3A98200677EB6 /* AlarmListTableViewController.swift in Sources */,
 				CC5866811CF3A74F00677EB6 /* Alarm 3.swift in Sources */,

@@ -36,6 +36,7 @@ class SwitchTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    
     @IBAction func switchValueChanged(sender: AnyObject) {
         delegate?.switchValueChanged(self, selected: alarmSwitch.on)
     

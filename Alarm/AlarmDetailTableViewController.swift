@@ -23,12 +23,10 @@ class AlarmDetailTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        if let alarm = alarm {
+        updateWithAlarm(alarm)
+        }
+        setUpView()
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,16 +36,63 @@ class AlarmDetailTableViewController: UITableViewController {
 
     // MARK: - Actions
     
+    @IBAction func disableButtonTapped(sender: AnyObject) {
+        guard let alarm = alarm else {
+            return }
+            AlarmController.sharedController.toggleEnabled(alarm)
+        setUpView()
+        }
+
     @IBAction func saveTappedButton(sender: AnyObject) {
+        guard let title = textField.text,
+        thisMorningAtMidnight = DateHelper.thisMorningAtMidnight else {return}
+            let timeIntervalSinceMidnight = datePicker.date.timeIntervalSinceDate(thisMorningAtMidnight)
+            if let alarm = alarm {
+                AlarmController.sharedController.updateAlarm(alarm, fireTimeFromMidnight: timeIntervalSinceMidnight, name: title)
+                } else {
+                let alarm = AlarmController.sharedController.addAlarm(timeIntervalSinceMidnight, name: title)
+                self.alarm = alarm }
+        
+        self.navigationController?.popViewControllerAnimated(true)
+        
+        
+    }
+    
+    
+    func updateWithAlarm(alarm: Alarm) {
+        guard let thisMorningAtMidnight = DateHelper.thisMorningAtMidnight else {
+            return
+        }
+        textField.text = alarm.name
+        datePicker.setDate(NSDate(timeInterval: alarm.fireTimeFromMidnight, sinceDate: thisMorningAtMidnight), animated: false)
+        
+}
+    
+    func setUpView() {
+        if self.alarm == nil {
+            disableButton.hidden = true} else {
+            disableButton.hidden = false
+            if alarm?.enabled == true {
+                disableButton.setTitle("Disable", forState: .Normal)
+                disableButton.setTitleColor(.whiteColor(), forState: .Normal)
+                disableButton.backgroundColor = .redColor()
+            } else {
+                disableButton.setTitle("Enable", forState: .Normal)
+                disableButton.setTitleColor(.blueColor(), forState: .Normal)
+                disableButton.backgroundColor = .grayColor()
+            }
+        
+        }
     }
     
     // MARK: - Table view data source
 
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+   /* override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return 0
     }
+ */
 
     /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {

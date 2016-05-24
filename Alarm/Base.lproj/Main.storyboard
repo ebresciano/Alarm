@@ -93,15 +93,15 @@
                         <sections>
                             <tableViewSection id="Pm4-B3-b95">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="yyF-U4-4aQ">
-                                        <rect key="frame" x="0.0" y="99" width="600" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="161" id="yyF-U4-4aQ">
+                                        <rect key="frame" x="0.0" y="99" width="600" height="161"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yyF-U4-4aQ" id="7D2-u9-ztK">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="160.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="INp-vl-TtT">
-                                                    <rect key="frame" x="4" y="4" width="592" height="35.5"/>
+                                                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="INp-vl-TtT">
+                                                    <rect key="frame" x="4" y="4" width="592" height="148.5"/>
                                                     <date key="date" timeIntervalSinceReferenceDate="485732510.04778397">
                                                         <!--2016-05-23 21:41:50 +0000-->
                                                     </date>
@@ -110,7 +110,7 @@
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="INp-vl-TtT" secondAttribute="trailing" constant="4" id="1Ns-Px-nIU"/>
                                                 <constraint firstItem="INp-vl-TtT" firstAttribute="leading" secondItem="7D2-u9-ztK" secondAttribute="leading" constant="4" id="3GP-t1-h4l"/>
-                                                <constraint firstAttribute="bottom" secondItem="INp-vl-TtT" secondAttribute="bottom" constant="4" id="4aO-cT-iUM"/>
+                                                <constraint firstAttribute="bottom" secondItem="INp-vl-TtT" secondAttribute="bottom" constant="8" id="4aO-cT-iUM"/>
                                                 <constraint firstItem="INp-vl-TtT" firstAttribute="top" secondItem="7D2-u9-ztK" secondAttribute="top" constant="4" id="edA-24-uZ9"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -120,7 +120,7 @@
                             <tableViewSection id="4Fg-px-XXN">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Xlf-M8-dWx">
-                                        <rect key="frame" x="0.0" y="179" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="296" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Xlf-M8-dWx" id="IYT-Jq-gbK">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -148,7 +148,7 @@
                             <tableViewSection id="drT-21-XEb">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="zl4-Cb-CIp">
-                                        <rect key="frame" x="0.0" y="295" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="412" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zl4-Cb-CIp" id="8gg-YX-ygV">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -159,6 +159,14 @@
                                                     <state key="normal" title="Disable">
                                                         <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="7"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="disableButtonTapped:" destination="KyO-0n-bms" eventType="touchUpInside" id="2wU-5a-qp8"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -214,6 +222,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="8MT-sh-Ycr"/>
+        <segue reference="9zW-Le-9jt"/>
     </inferredMetricsTieBreakers>
 </document>

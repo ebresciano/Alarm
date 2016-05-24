@@ -8,21 +8,19 @@
 
 import UIKit
 
-class AlarmListTableViewController: UITableViewController {
+class AlarmListTableViewController: UITableViewController, SwitchTableViewCellDelegate {
     
     
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-      
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,35 +47,34 @@ class AlarmListTableViewController: UITableViewController {
         return cell ?? UITableViewCell()
     }
     
-
-    
-    // Override to support editing the table view.
+   // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
             let alarm = AlarmController.sharedController.alarms[indexPath.row]
             AlarmController.sharedController.deleteAlarm(alarm)
-            // Delete the row from the data source
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+
         }    
     }
     
-
- 
     
+    func switchValueChanged(cell: SwitchTableViewCell, selected: Bool) {
+        guard let indexPath = tableView.indexPathForCell(cell) else { return }
+        let alarm = AlarmController.sharedController.alarms[indexPath.row]
+        AlarmController.sharedController.toggleEnabled(alarm)
+        tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+    
+}
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "toDetailSegue" {
+        if segue.identifier == "cellToAlarmDetail" {
         let alarmDVC = segue.destinationViewController as? AlarmDetailTableViewController
         if let indexPath = tableView.indexPathForSelectedRow {
             let alarm = AlarmController.sharedController.alarms[indexPath.row]
             alarmDVC?.alarm = alarm
         }
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
     
         }
     }
