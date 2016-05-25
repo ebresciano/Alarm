@@ -81,7 +81,7 @@
 				CC5866801CF3A74F00677EB6 /* Alarm 3.swift */,
 				1A0FB7BE1CE19229006808D9 /* DateHelper.swift */,
 				CC5866851CF3A99300677EB6 /* SwitchTableViewCell.swift */,
-				CC58668B1CF3B22F00677EB6 /* AlarmController.swift */,
+				CC58668D1CF5051B00677EB6 /* CONTROLLER */,
 			);
 			name = MODEL;
 			sourceTree = "<group>";
@@ -101,6 +101,14 @@
 				CC5866871CF3A9D200677EB6 /* AlarmDetailTableViewController.swift */,
 			);
 			name = "VIEW CONTROLLERS";
+			sourceTree = "<group>";
+		};
+		CC58668D1CF5051B00677EB6 /* CONTROLLER */ = {
+			isa = PBXGroup;
+			children = (
+				CC58668B1CF3B22F00677EB6 /* AlarmController.swift */,
+			);
+			name = CONTROLLER;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
